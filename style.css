@@ -1,0 +1,153 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f3f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .search-container {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .logo h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #ff5722;
+    animation: fadeIn 2s ease;
+  }
+  
+  .search-bar-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 60%;
+    margin: 0 auto;
+    animation: slideIn 1.5s ease;
+  }
+  
+  .search-bar {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    font-size: 18px;
+    border-radius: 50px;
+    outline: none;
+    transition: width 0.5s ease;
+  }
+  
+  .search-bar input:focus {
+    width: 110%;
+    background-color: #fff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .search-bar .search-btn {
+    background-color: #ff5722;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-bar .search-btn:hover {
+    background-color: #e64a19;
+  }
+  
+  .search-bar .search-btn img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  #suggestions-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    max-height: 350px;
+    overflow-y: auto;
+    display: none;
+    transition: all 0.3s ease;
+  }
+  
+  #suggestions-list li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #f1f3f4;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #suggestions-list li:hover {
+    background-color: #ff5722;
+    color: #fff;
+  }
+  
+  #suggestions-list li:last-child {
+    border-bottom: none;
+  }
+  
+  @media (max-width: 768px) {
+    .search-bar-wrapper {
+      width: 90%;
+    }
+  
+    .logo h1 {
+      font-size: 36px;
+    }
+  
+    .search-bar input {
+      font-size: 16px;
+    }
+  }
+  
+  /* Keyframes for Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
